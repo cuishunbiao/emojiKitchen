@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       title: 'Emoji Kitchen Online',
       meta: [
         { name: 'description', content: 'emoji kitchen: create fun custom emojis!' },
-        { name: 'keyworld', content: 'emoji kitchen,emoji kitchen online' }
+        { name: 'keyworld', content: 'emoji kitchen, emoji kitchen online' }
       ],
     }
   }
