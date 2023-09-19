@@ -14,5 +14,4 @@ export default defineNuxtConfig({
       ],
     }
   }
-  // js: ['@/assets/js/picker.js']
 })
