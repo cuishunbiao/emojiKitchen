@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       title: 'Emoji Kitchen Online',
       meta: [
         { name: 'description', content: 'Pick two emojis you really like, then blend them together to create a brand new emoji. Create fun custom emojis!' },
-        { name: 'keyworld', content: 'emoji kitchen, emoji kitchen online' }
+        { name: 'keywords', content: 'emoji kitchen iphone, emoji kitchen apple, emojie kitchen, emoji kitchen descargar' }
       ],
     }
   }
