@@ -70,6 +70,9 @@
             </div>
         </li>
     </div>
+    <footer class="border-t mt-16 border-slate-900/5 py-6 text-center">
+        <p class="text-gray-400">© 2023 <a href="https://emojikitchen.info/">emojikitchen.info</a> All rights reserved. link: <a href="https://minutetimer.online/7minutetimer.html">7 minute timer</a> | <a href="https://minutetimer.online/11minutetimer.html">11 minute timer</a></p>
+    </footer>
 </template>
 
 <script setup>
