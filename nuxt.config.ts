@@ -12,6 +12,9 @@ export default defineNuxtConfig({
         { name: 'description', content: 'emoji kitchen: create fun custom emojis!' },
         { name: 'keyworld', content: 'emoji kitchen, emoji kitchen online' }
       ],
+      script: [
+        { async: true, src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1504730712788512', crossorigin: 'anonymous' }
+      ]
     }
   }
 })
