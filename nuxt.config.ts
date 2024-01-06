@@ -6,11 +6,12 @@ export default defineNuxtConfig({
   ],
   app: {
     head: {
-      charset: 'utf-16',
+    charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
       title: 'Emoji Kitchen Online',
       meta: [
         { name: 'description', content: 'Pick two emojis you really like, then blend them together to create a brand new emoji. Create fun custom emojis!' },
-        { name: 'keywords', content: 'emoji kitchen iphone, emoji kitchen apple, emojie kitchen, emoji kitchen descargar' }
+        { name: 'keywords', content: 'emoji kitchen browser, emoji kitchen online, emoji kitchen apple, emojie kitchen, emoji kitchen list' }
       ],
       script: [
         { async: true, src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1504730712788512', crossorigin: 'anonymous' },
