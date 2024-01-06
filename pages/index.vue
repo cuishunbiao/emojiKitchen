@@ -59,7 +59,7 @@
             </div>
         </div>
     </div>
-    <div class="mt-4 flex flex-wrap gap-4 app-box" style="justify-content: space-around">
+    <div class="mt-4 flex flex-wrap gap-4 app-box" :class="{ appBoxSmallTop: !tipsStatus }" style="justify-content: space-around">
         <li v-for="item in knownSupportedEmoji" :key="item">
             <div :class="{
                 'bg-blue-300 radius':
@@ -245,7 +245,7 @@ li:hover {
 .select-box {
     width: 70%;
     height: 15rem;
-    top: 12%;
+    top: 12.5%;
     margin: 0 auto;
     background-color: #fff;
     left: 50%;
@@ -265,12 +265,16 @@ li:hover {
 }
 
 .select-box.smallTop {
-    margin-top: 3rem;
+    top: 4%;
 }
 
 .app-box {
     margin-top: 23rem;
 }
+.app-box.appBoxSmallTop {
+    margin-top: 23%;
+}
+
 
 @media screen and (max-width: 900px) {
     .select-box {
@@ -281,9 +285,9 @@ li:hover {
 
 @media screen and (max-width: 650px) {
     .select-box {
-        width: 90%;
-        height: 10rem;
-        margin-left: -45%;
+        width: 100%;
+        height: 8rem;
+        margin-left: -50%;
         box-shadow: none;
     }
 
