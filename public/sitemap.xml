@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-      <loc>https://emojikitchen.info</loc>
-      <lastmod>2024-01-07</lastmod>
-   </url>
     <url>
-      <loc>https://emojikitchen.info/emoji-kitchen-how-to-use</loc>
-      <lastmod>2024-01-07</lastmod>
-   </url>
+        <loc>https://emojikitchen.info</loc>
+    </url>
+    <url>
+        <loc>https://emojikitchen.info/emoji-kitchen-how-to-use</loc>
+    </url>
 </urlset>
