@@ -1,17 +1,5 @@
 <template>
     <div class="text-gray-900">
-        <header class="py-4" style="background-color: #f4a52a">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-between items-center">
-                    <div class="flex items-center">
-                        <nuxt-link to="/"><img :src="logo" alt="Emoji Kitchen Online" class="w-10 h-10"></nuxt-link>
-                    </div>
-                    <nav>
-                        <nuxt-link to="/" class="text-white hover:text-gray-700">Home</nuxt-link>
-                    </nav>
-                </div>
-            </div>
-        </header>
         <main class="container mx-auto px-4 py-8 max-w-screen-md">
             <section class="mb-8">
                 <div class="text-4xl text-center font-semibold mb-4">Emoji Kitchen How to Use?</div>
@@ -53,7 +41,6 @@
 </template>
   
 <script setup lang="ts">
-import logo from "@/assets/images/logo.png";
 import anger from "@/assets/images/anger.png";
 import joyful from "@/assets/images/joyful.png";
 import rabbit from "@/assets/images/rabbit.png";

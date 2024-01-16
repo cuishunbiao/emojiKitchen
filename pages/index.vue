@@ -1,8 +1,8 @@
 <template>
-    <div v-if="tipsStatus" class="fixed top-0 left-0 right-0 text-white p-4 shadow-lg" style="background-color: #f4a52a">
+    <!-- <div v-if="tipsStatus" class="fixed top-0 left-0 right-0 text-white p-4 shadow-lg" style="background-color: #f4a52a">
         <div class="flex justify-between items-center">
             <div class="flex">
-                Click to choose two emoticons that appeal to you and craft a new emoticon. <nuxt-link class="ml-4" to="/emoji-kitchen-how-to-use">emoji kitchen how to use</nuxt-link>
+                Click to choose two emoticons that appeal to you and craft a new emoticon. 
             </div>
             <button class="text-white hover:text-red-500" @click="hideTips">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -10,8 +10,8 @@
                 </svg>
             </button>
         </div>
-    </div>
-    <div class="fixed flex items-center justify-center space-x-4 select-box" :class="{ smallTop: !tipsStatus }">
+    </div> -->
+    <div class="fixed flex items-center justify-center space-x-4 select-box">
         <div class="w-1/3 flex justify-center items-center">
             <div class="border border-gray-300 p-4 rounded-lg box-item">
                 <img width="80" v-if="aContent" :src="aContent" alt="emoji" />
@@ -22,9 +22,7 @@
                 </div>
             </div>
         </div>
-
         <div class="text-4xl">+</div>
-
         <div class="w-1/3 flex justify-center items-center">
             <div class="border border-gray-300 p-4 rounded-lg box-item">
                 <img width="80" v-if="bContent" :src="bContent" alt="emoji" />
@@ -59,7 +57,7 @@
             </div>
         </div>
     </div>
-    <div class="mt-4 flex flex-wrap gap-4 app-box" :class="{ appBoxSmallTop: !tipsStatus }" style="justify-content: space-around">
+    <div class="p-2 mt-4 flex flex-wrap gap-4 app-box" style="justify-content: space-around">
         <li v-for="item in knownSupportedEmoji" :key="item">
             <div :class="{
                 'bg-blue-300 radius':
@@ -87,17 +85,11 @@ const selectedAIcon = ref(null);
 const bContent = ref("");
 const selectedBIcon = ref(null);
 
-const tipsStatus = ref(true);
-
 const imagesResultRef = ref();
 const imagesResultButton = ref();
 
 const currentText = ref("Copy image");
 const noResult = ref(false);
-
-const hideTips = () => {
-    tipsStatus.value = false;
-};
 
 const generateEmojiUrl = (emoji) => {
     return `https://raw.githubusercontent.com/googlefonts/noto-emoji/main/svg/emoji_u${filterItemUrl(
@@ -245,7 +237,7 @@ li:hover {
 .select-box {
     width: 70%;
     height: 15rem;
-    top: 12.5%;
+    top: 11%;
     margin: 0 auto;
     background-color: #fff;
     left: 50%;
@@ -269,7 +261,7 @@ li:hover {
 }
 
 .app-box {
-    margin-top: 23rem;
+    margin-top: 19rem;
 }
 .app-box.appBoxSmallTop {
     margin-top: 23%;
@@ -307,7 +299,7 @@ li:hover {
     }
 
     .app-box {
-        margin-top: 16rem;
+        margin-top: 10rem;
     }
 
     .app-box img {
