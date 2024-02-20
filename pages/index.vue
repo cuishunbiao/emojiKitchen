@@ -11,7 +11,7 @@
             </button>
         </div>
     </div> -->
-    <div class="fixed flex items-center justify-center space-x-4 select-box">
+    <div class="fixed flex items-center justify-center space-x-4 select-box" ref="selectBox">
         <div class="w-1/3 flex justify-center items-center">
             <div class="border border-gray-300 p-4 rounded-lg box-item">
                 <img width="80" v-if="aContent" :src="aContent" alt="emoji" />
@@ -57,7 +57,7 @@
             </div>
         </div>
     </div>
-    <div class="p-2 mt-4 flex flex-wrap gap-4 app-box" style="justify-content: space-around">
+    <div class="p-2 mt-4 flex flex-wrap gap-4 app-box" ref="appBox" style="justify-content: space-around">
         <li v-for="item in knownSupportedEmoji" :key="item">
             <div :class="{
                 'bg-blue-300 radius':
@@ -107,7 +107,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { ref, watch, onMounted, onBeforeUnmount } from "vue";
 import emojiData from "./assets/data/emojiData.json";
 import { knownSupportedEmoji } from "./assets/js/images";
 import anger from "@/assets/images/anger.png";
@@ -229,6 +229,7 @@ watch([aContent, bContent], () => {
     }
 });
 
+
 const copyImage = async () => {
     const doCopyImg2Clipboard = async (
         image,
@@ -263,6 +264,29 @@ const copyImage = async () => {
         }
     );
 };
+
+
+const selectBox = ref(null)
+const appBox = ref(null)
+const handleScroll = () => {
+    const box = selectBox.value;
+    if (!box) return;
+    const { scrollTop } = document.documentElement;
+    const appBoxHeight = appBox.value.clientHeight
+    if (scrollTop >= appBoxHeight) {
+        box.style.display = 'none';
+    } else {
+        box.style.display = 'flex';
+    }
+}
+
+onMounted(() => {
+    window.addEventListener('scroll', handleScroll);
+});
+onBeforeUnmount(() => {
+    window.removeEventListener('scroll', handleScroll);
+});
+
 </script>
 
 <style>

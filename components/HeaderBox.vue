@@ -16,7 +16,7 @@
         <!-- Responsive mobile menu -->
         <div v-show="mobileMenuVisible" class="lg:hidden">
             <nuxt-link to="/" class="block text-white hover:text-gray-700 py-2">Home</nuxt-link>
-            <nuxt-link to="/emoji-kitchen-how-to-use" class="block text-white hover:text-gray-700 py-2">How To Use</nuxt-link>
+            <!-- <nuxt-link to="/emoji-kitchen-how-to-use" class="block text-white hover:text-gray-700 py-2">How To Use</nuxt-link> -->
             <nuxt-link to="/emoji-kitchen-download" class="block text-white hover:text-gray-700 py-2">Download</nuxt-link>
         </div>
     </div>
