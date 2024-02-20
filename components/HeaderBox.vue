@@ -7,7 +7,7 @@
             </div>
             <nav class="hidden lg:flex">
                 <nuxt-link to="/" class="text-white hover:text-gray-700">Home</nuxt-link>
-                <nuxt-link class="text-white hover:text-gray-700 ml-8" to="/emoji-kitchen-how-to-use">How To Use</nuxt-link>
+                <!-- <nuxt-link class="text-white hover:text-gray-700 ml-8" to="/emoji-kitchen-how-to-use">How To Use</nuxt-link> -->
                 <nuxt-link class="text-white hover:text-gray-700 ml-8" to="/emoji-kitchen-download">Download</nuxt-link>
             </nav>
             <!-- Add a responsive mobile menu button -->
