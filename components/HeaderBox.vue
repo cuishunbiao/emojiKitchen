@@ -9,8 +9,8 @@
                 <nuxt-link to="/" class="text-white hover:text-gray-700">Home</nuxt-link>
                 <nuxt-link class="text-white hover:text-gray-700 ml-8" to="/emoji-kitchen-how-to-use">How To Use</nuxt-link>
                 <nuxt-link class="text-white hover:text-gray-700 ml-8" to="/emoji-kitchen-download">Download</nuxt-link>
-                <nuxt-link class="text-white hover:text-gray-700 ml-8" target="_blank" to="https://discord.gg/tEsWWBMs">Discord</nuxt-link>
-                <nuxt-link class="text-white hover:text-gray-700 ml-8" target="_blank" to="https://github.com/cuishunbiao/emojiKitchen">Github</nuxt-link>
+                <!-- <nuxt-link class="text-white hover:text-gray-700 ml-8" target="_blank" to="https://discord.gg/tEsWWBMs">Discord</nuxt-link>
+                <nuxt-link class="text-white hover:text-gray-700 ml-8" target="_blank" to="https://github.com/cuishunbiao/emojiKitchen">Github</nuxt-link> -->
             </nav>
             <!-- Add a responsive mobile menu button -->
             <button class="lg:hidden text-white" @click="toggleMobileMenu">Menu</button>
@@ -20,8 +20,8 @@
             <nuxt-link to="/" class="block text-white hover:text-gray-700 py-2">Home</nuxt-link>
             <nuxt-link to="/emoji-kitchen-how-to-use" class="block text-white hover:text-gray-700 py-2">How To Use</nuxt-link>
             <nuxt-link to="/emoji-kitchen-download" class="block text-white hover:text-gray-700 py-2">Download</nuxt-link>
-            <nuxt-link to="https://discord.gg/tEsWWBMs" target="_blank" class="block text-white hover:text-gray-700 py-2">Discord</nuxt-link>
-            <nuxt-link to="https://github.com/cuishunbiao/emojiKitchen" target="_blank" class="block text-white hover:text-gray-700 py-2">Github</nuxt-link>
+            <!-- <nuxt-link to="https://discord.gg/tEsWWBMs" target="_blank" class="block text-white hover:text-gray-700 py-2">Discord</nuxt-link>
+            <nuxt-link to="https://github.com/cuishunbiao/emojiKitchen" target="_blank" class="block text-white hover:text-gray-700 py-2">Github</nuxt-link> -->
         </div>
     </div>
 </header>
