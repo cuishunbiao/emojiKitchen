@@ -11,7 +11,7 @@
             </button>
         </div>
     </div> -->
-    <div class="fixed flex items-center justify-center space-x-4 select-box">
+    <div class="fixed flex items-center justify-center space-x-4 select-box" ref="selectBox">
         <div class="w-1/3 flex justify-center items-center">
             <div class="border border-gray-300 p-4 rounded-lg box-item">
                 <img width="80" v-if="aContent" :src="aContent" alt="emoji" />
@@ -57,7 +57,7 @@
             </div>
         </div>
     </div>
-    <div class="p-2 mt-4 flex flex-wrap gap-4 app-box" style="justify-content: space-around">
+    <div class="p-2 mt-4 flex flex-wrap gap-4 app-box" ref="appBox" style="justify-content: space-around">
         <li v-for="item in knownSupportedEmoji" :key="item">
             <div :class="{
                 'bg-blue-300 radius':
@@ -67,12 +67,52 @@
             </div>
         </li>
     </div>
+    <div class="container mx-auto mt-16 px-4 py-8 max-w-screen-md">
+        <section class="mb-8">
+            <div class="text-5xl text-center font-semibold mb-4">Emoji Kitchen How to Use?</div>
+            <p class="text-lg mt-10">
+                we've got this awesome "Emojify" feature that lets you turn plain emojis into super exciting and personalized expressions.
+            </p>
+            <p class="text-lg mt-2">
+                You can mix and match different emojis to create unique combinations that perfectly capture your emotions or messages.
+            </p>
+        </section>
+        <section class="mb-8">
+            <div class="text-3xl font-semibold mb-4">How to go about it?</div>
+            <p class="text-lg">
+                Pick two emojis you really like, then blend them together to create a brand new emoji. For example, 😊 + 🌟 = ✨. Once you've crafted the emoji you want, simply click "Copy Image" and paste it into your chat app, social media, or anywhere you want to use it.
+            </p>
+        </section>
+        <section class="mb-8">
+            <div class="text-2xl font-semibold mb-2">Joy + Caring = Super joyful and caring</div>
+            <img :src="joyful" alt="Joyful and Caring Emoji" class="w-full mb-4">
+        </section>
+        <section class="mb-8">
+            <div class="text-2xl font-semibold mb-2">Sad + Little Rabbit = Sad little rabbit</div>
+            <img :src="rabbit" alt="Sad Little Rabbit Emoji" class="w-full mb-4">
+        </section>
+        <section class="mb-8">
+            <div class="text-2xl font-semibold mb-2">Anger + Shut up = Anger beyond words</div>
+            <img :src="anger" alt="Anger Beyond Words Emoji" class="w-full mb-4">
+        </section>
+        <section class="mt-8">
+            <p class="text-lg">
+                Our mission at emojiKitchen.info is to make playing with and crafting unique emojis fun and easy.
+            </p>
+            <p class="text-lg mt-2">
+                So go ahead, explore its features, unleash your creativity, and add a personalized touch to your emoji game!
+            </p>
+        </section>
+    </div>
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { ref, watch, onMounted, onBeforeUnmount } from "vue";
 import emojiData from "./assets/data/emojiData.json";
 import { knownSupportedEmoji } from "./assets/js/images";
+import anger from "@/assets/images/anger.png";
+import joyful from "@/assets/images/joyful.png";
+import rabbit from "@/assets/images/rabbit.png";
 
 const rootUrl = "https://www.gstatic.com/android/keyboard/emojikitchen";
 
@@ -189,6 +229,7 @@ watch([aContent, bContent], () => {
     }
 });
 
+
 const copyImage = async () => {
     const doCopyImg2Clipboard = async (
         image,
@@ -223,6 +264,29 @@ const copyImage = async () => {
         }
     );
 };
+
+
+const selectBox = ref(null)
+const appBox = ref(null)
+const handleScroll = () => {
+    const box = selectBox.value;
+    if (!box) return;
+    const { scrollTop } = document.documentElement;
+    const appBoxHeight = appBox.value.clientHeight
+    if (scrollTop >= appBoxHeight) {
+        box.style.display = 'none';
+    } else {
+        box.style.display = 'flex';
+    }
+}
+
+onMounted(() => {
+    window.addEventListener('scroll', handleScroll);
+});
+onBeforeUnmount(() => {
+    window.removeEventListener('scroll', handleScroll);
+});
+
 </script>
 
 <style>
