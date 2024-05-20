@@ -12,6 +12,9 @@ export default defineNuxtConfig({
       meta: [
         { name: 'description', content: 'Pick two emojis you really like, then blend them together to create a brand new emoji. Create fun custom emojis!' },
         { name: 'keywords', content: 'emoji kitchen browser, emoji kitchen online, emoji kitchen apple, emojie kitchen, emoji kitchen list' }
+      ],
+      script: [
+        { async: true, src: 'https://alwingulla.com/88/tag.min.js', 'data-zone': '67172', 'data-cfasync': 'false' },
       ]
     },
   }
